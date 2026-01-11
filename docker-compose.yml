@@ -11,7 +11,7 @@ services:
         - "traefik.http.routers.propostas.rule=Host(`propostas.yepag.com`)"
         - "traefik.http.routers.propostas.entrypoints=websecure"
         - "traefik.http.routers.propostas.tls=true"
-        - "traefik.http.routers.propostas.tls.certresolver=letsencrypt"
+        - "traefik.http.routers.propostas.tls.certresolver=letsencryptresolver"
         - "traefik.http.services.propostas.loadbalancer.server.port=80"
         - "traefik.http.routers.propostas-http.rule=Host(`propostas.yepag.com`)"
         - "traefik.http.routers.propostas-http.entrypoints=web"
