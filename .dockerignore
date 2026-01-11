@@ -1,0 +1,28 @@
+# Sistema
+.DS_Store
+*.DS_Store
+
+# Git
+.git
+.gitignore
+
+# Documentação
+README*.md
+*.md
+COMANDOS*.md
+CONFIGURAR*.md
+CORRIGIR*.md
+CRIAR*.md
+DEPLOY*.md
+DIAGNOSTICO*.md
+FINALIZAR*.md
+GUIA*.md
+INSTRUCOES*.md
+PASSO*.md
+RESOLVER*.md
+TROUBLESHOOTING*.md
+VERIFICAR*.md
+
+# Docker
+docker-compose.yml
+.dockerignore
