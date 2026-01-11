@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  propostas:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: propostas-yepag:latest
+    container_name: propostas-yepag
+    restart: unless-stopped
+    networks:
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.propostas.rule=Host(`propostas.yepag.com`)"
+      - "traefik.http.routers.propostas.entrypoints=websecure"
+      - "traefik.http.routers.propostas.tls=true"
+      - "traefik.http.routers.propostas.tls.certresolver=letsencrypt"
+      - "traefik.http.services.propostas.loadbalancer.server.port=80"
+      - "traefik.http.routers.propostas-http.rule=Host(`propostas.yepag.com`)"
+      - "traefik.http.routers.propostas-http.entrypoints=web"
+      - "traefik.http.routers.propostas-http.middlewares=https-redirect"
+      - "traefik.http.middlewares.https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.https-redirect.redirectscheme.permanent=true"
+
+networks:
+  traefik:
+    external: true
