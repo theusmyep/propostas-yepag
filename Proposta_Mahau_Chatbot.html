@@ -290,14 +290,30 @@
 
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 60px;
             align-items: center;
+            justify-items: center;
+            text-align: center;
+        }
+
+        /* Centralizar conteúdo no desktop */
+        @media (min-width: 769px) {
+            .about-grid {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .about-list {
+                display: inline-block;
+                text-align: left;
+            }
         }
 
         @media (max-width: 768px) {
             .about-grid {
                 grid-template-columns: 1fr;
+                text-align: left;
             }
         }
 
