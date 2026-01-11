@@ -6,6 +6,9 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 # Copiar Proposta Mahau Bar como mahaubar.html
 COPY Proposta_Mahau_Bar.html /usr/share/nginx/html/mahaubar.html
 
+# Copiar Proposta Mahau Chatbot (Agenteia) como mahau_agenteia.html
+COPY Proposta_Mahau_Chatbot.html /usr/share/nginx/html/mahau_agenteia.html
+
 # Copiar pasta de logos
 COPY logos/ /usr/share/nginx/html/logos/
 
