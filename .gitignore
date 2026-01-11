@@ -1,0 +1,6 @@
+.DS_Store
+*.DS_Store
+README*.md
+*.md
+!README.md
+Proposta_BR_Arena_Visual.html
