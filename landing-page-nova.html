@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matheus Mello - Gestor de Tráfego Pago | R$ 60M+ Gerenciados</title>
+    <meta name="description" content="Especialista em Tráfego Pago com R$ 60M+ gerenciados. Transforme investimento em anúncios em resultados reais e escaláveis.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #00FF88;
+            --primary-dark: #00CC6E;
+            --dark: #0a0a0a;
+            --dark-900: #0f0f0f;
+            --dark-800: #1a1a1a;
+            --dark-700: #242424;
+            --gray: #666;
+            --gray-light: #999;
+            --white: #ffffff;
+            --gradient-primary: linear-gradient(135deg, #00FF88 0%, #00CC6E 100%);
+            --gradient-dark: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: var(--dark);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 1000px;
+            height: 1000px;
+            background: radial-gradient(circle, rgba(0,255,136,0.1) 0%, transparent 70%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.3; }
+            50% { transform: scale(1.2) rotate(180deg); opacity: 0.5; }
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(0,255,136,0.1);
+            border: 1px solid var(--primary);
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            animation: fadeInUp 0.8s ease-out;
+            color: var(--primary);
+        }
+
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 .highlight {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            color: var(--gray-light);
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+            font-weight: 400;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--gradient-primary);
+            color: var(--dark);
+            padding: 22px 50px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 40px rgba(0,255,136,0.3);
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(0,255,136,0.5);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 80px;
+            animation: fadeInUp 0.8s ease-out 0.8s both;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--gray-light);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 100px 40px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            section { padding: 60px 20px; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-label {
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* SERVICES */
+        .services {
+            background: var(--dark-900);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--dark-800);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0,255,136,0.2);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(0,255,136,0.1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .service-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: var(--gray-light);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .service-features {
+            list-style: none;
+        }
+
+        .service-features li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--gray-light);
+            font-size: 0.95rem;
+        }
+
+        .service-features li::before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* RESULTS */
+        .results {
+            background: var(--dark);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .result-card {
+            background: var(--dark-800);
+            border: 1px solid rgba(0,255,136,0.1);
+            border-radius: 20px;
+            padding: 35px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .result-card:hover {
+            transform: scale(1.05);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0,255,136,0.2);
+        }
+
+        .result-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .result-card h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .result-card p {
+            color: var(--gray-light);
+            font-size: 0.95rem;
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            background: var(--dark-900);
+            text-align: center;
+            padding: 120px 40px;
+        }
+
+        .cta-section h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            color: var(--gray-light);
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--gradient-primary);
+            color: var(--dark);
+            padding: 25px 60px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 50px rgba(0,255,136,0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0,255,136,0.6);
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--dark);
+            padding: 60px 40px 40px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--gray-light);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(0,255,136,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            color: var(--dark);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .services-grid,
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+        /* SCROLL INDICATOR */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-15px); }
+            60% { transform: translateX(-50%) translateY(-7px); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">🚀 Gestor de Tráfego Pago</div>
+            <h1>
+                Transformo Investimento em <span class="highlight">Resultados Reais</span>
+            </h1>
+            <p class="hero-subtitle">
+                Especialista em Meta Ads e Google Ads com mais de R$ 60 milhões gerenciados.
+                Escalando negócios com estratégias de tráfego pago de alta performance.
+            </p>
+            <a href="#contato" class="hero-cta">
+                Vamos Conversar <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">R$ 60M+</span>
+                    <span class="stat-label">Gerenciados</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">8 Anos</span>
+                    <span class="stat-label">de Experiência</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Clientes Atendidos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">< R$ 2,50</span>
+                    <span class="stat-label">Custo por Lead</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="servicos">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">O Que Faço</div>
+                <h2 class="section-title">Serviços de Alto Impacto</h2>
+                <p class="section-subtitle">
+                    Soluções completas para escalar seu negócio com tráfego pago e automações
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-meta"></i>
+                    </div>
+                    <h3>Gestão Meta Ads</h3>
+                    <p>Gestão profissional de campanhas no Facebook e Instagram com otimizações diárias focadas em performance máxima.</p>
+                    <ul class="service-features">
+                        <li>Otimizações diárias</li>
+                        <li>Análise de métricas em tempo real</li>
+                        <li>Testes A/B de criativos</li>
+                        <li>Relatórios detalhados</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <h3>Gestão Google Ads</h3>
+                    <p>Campanhas em rede de pesquisa e display para alcançar usuários no momento exato da intenção de compra.</p>
+                    <ul class="service-features">
+                        <li>Pesquisa de palavras-chave</li>
+                        <li>Campanhas de Search e Display</li>
+                        <li>Remarketing estratégico</li>
+                        <li>Otimização de ROI</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Consultoria de Tráfego</h3>
+                    <p>Sessões estratégicas para análise profunda de campanhas e definição de planos de escala.</p>
+                    <ul class="service-features">
+                        <li>Auditoria de campanhas</li>
+                        <li>Estratégias de escala</li>
+                        <li>Plano de ação personalizado</li>
+                        <li>Acompanhamento de resultados</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Automações Inteligentes</h3>
+                    <p>Sistemas completos com dashboards, relatórios automáticos e integrações para maximizar eficiência.</p>
+                    <ul class="service-features">
+                        <li>Dashboards em tempo real</li>
+                        <li>Relatórios automatizados</li>
+                        <li>Integração com CRMs</li>
+                        <li>Monitoramento 24/7</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>Landing Pages</h3>
+                    <p>Criação e otimização de páginas de alta conversão com foco em design persuasivo e UX.</p>
+                    <ul class="service-features">
+                        <li>Design responsivo</li>
+                        <li>Otimizado para conversão</li>
+                        <li>Testes A/B contínuos</li>
+                        <li>Integração com ferramentas</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <h3>Chatbots com IA</h3>
+                    <p>Atendimento automatizado inteligente para qualificar leads e aumentar conversões 24/7.</p>
+                    <ul class="service-features">
+                        <li>Atendimento 24/7</li>
+                        <li>Qualificação automática</li>
+                        <li>Integração WhatsApp</li>
+                        <li>Treinamento personalizado</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULTS SECTION -->
+    <section class="results" id="resultados">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Resultados Comprovados</div>
+                <h2 class="section-title">Casos de Sucesso</h2>
+                <p class="section-subtitle">
+                    Números reais de clientes que confiaram no meu trabalho
+                </p>
+            </div>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-icon">💰</div>
+                    <h4>R$ 3k → R$ 150k</h4>
+                    <p>E-commerce escalado de R$ 3 mil para R$ 150 mil por mês em faturamento</p>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-icon">📈</div>
+                    <h4>R$ 100k/mês</h4>
+                    <p>Negócio local escalado para R$ 100 mil em receita mensal recorrente</p>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-icon">🎯</div>
+                    <h4>< R$ 2,50</h4>
+                    <p>Lead qualificado com custo médio inferior a R$ 2,50</p>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-icon">🚀</div>
+                    <h4>6 Dígitos</h4>
+                    <p>Infoproduto gerando múltiplos de 6 dígitos em apenas 5 meses</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section" id="contato">
+        <div class="container">
+            <h2>Pronto para <span class="highlight">Escalar seu Negócio?</span></h2>
+            <p>
+                Vamos conversar sobre como posso ajudar a transformar seus investimentos em anúncios em resultados reais e mensuráveis.
+            </p>
+            <a href="https://wa.me/5511988979472?text=Ol%C3%A1%20Matheus%2C%20vim%20do%20seu%20site%20e%20quero%20saber%20mais%20sobre%20seus%20servi%C3%A7os!" target="_blank" class="cta-button">
+                <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Matheus Mello</h4>
+                <p>Gestor de Tráfego Pago especializado em Meta Ads e Google Ads.</p>
+                <div class="social-links">
+                    <a href="https://instagram.com/theusm" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5511988979472" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:matheus@yepag.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Serviços</h4>
+                <a href="#servicos">Gestão Meta Ads</a>
+                <a href="#servicos">Gestão Google Ads</a>
+                <a href="#servicos">Consultoria</a>
+                <a href="#servicos">Automações</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <a href="https://wa.me/5511988979472" target="_blank">WhatsApp: (11) 98897-9472</a>
+                <a href="mailto:matheus@yepag.com">matheus@yepag.com</a>
+                <a href="https://theusm.com.br">theusm.com.br</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Certificações</h4>
+                <p>✓ Meta Blueprint Certificado</p>
+                <p>✓ Google Ads Certificado</p>
+                <p>✓ 8+ anos de experiência</p>
+                <p>✓ R$ 60M+ gerenciados</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Matheus Mello - Gestor de Tráfego Pago. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .result-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

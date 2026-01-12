@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Lúcia Mello - Consultoria em Amamentação | 20 Anos de Experiência</title>
+    <meta name="description" content="Enfermeira Obstetra especializada em amamentação. Mais de 1.000 mães atendidas. Amamentar não precisa doer.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #E8B4B8;
+            --primary-dark: #D4989E;
+            --secondary: #B4D4E8;
+            --accent: #F5E6D3;
+            --white: #FFFFFF;
+            --cream: #FAF8F5;
+            --beige: #F5F1ED;
+            --text-dark: #4A4A4A;
+            --text-gray: #757575;
+            --text-light: #9E9E9E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--white);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* HEADER */
+        .header {
+            background: var(--white);
+            padding: 20px 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Lora', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .header-cta {
+            background: var(--primary);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .header-cta:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(232,180,184,0.3);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 80px 40px;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--beige) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(232,180,184,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        .hero-text h1 {
+            font-family: 'Lora', serif;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-text .highlight {
+            color: var(--primary-dark);
+            position: relative;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .hero-features {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .hero-features li {
+            padding: 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--text-gray);
+            font-size: 1rem;
+        }
+
+        @media (max-width: 968px) {
+            .hero-features li {
+                justify-content: center;
+            }
+        }
+
+        .hero-features li i {
+            color: var(--primary);
+            font-size: 1.3rem;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--primary);
+            color: var(--white);
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(232,180,184,0.3);
+        }
+
+        .hero-cta:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(232,180,184,0.4);
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-badge {
+            background: var(--white);
+            padding: 20px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .hero-badge-number {
+            font-family: 'Lora', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            display: block;
+        }
+
+        .hero-badge-text {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* STATS */
+        .stats {
+            padding: 60px 40px;
+            background: var(--white);
+        }
+
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 30px;
+        }
+
+        .stat-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .stat-number {
+            font-family: 'Lora', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* SERVICES */
+        .services {
+            padding: 100px 40px;
+            background: var(--beige);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-label {
+            color: var(--primary-dark);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-family: 'Lora', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(232,180,184,0.2);
+            border-color: var(--primary);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            color: var(--white);
+        }
+
+        .service-card h3 {
+            font-family: 'Lora', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .service-link {
+            color: var(--primary-dark);
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.3s ease;
+        }
+
+        .service-link:hover {
+            gap: 12px;
+        }
+
+        /* ABOUT */
+        .about {
+            padding: 100px 40px;
+            background: var(--white);
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        @media (max-width: 968px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 30px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 15px 50px rgba(232,180,184,0.3);
+        }
+
+        .about-image i {
+            font-size: 8rem;
+            color: var(--white);
+            opacity: 0.9;
+        }
+
+        .about-text h2 {
+            font-family: 'Lora', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+        }
+
+        .about-text p {
+            color: var(--text-gray);
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .credentials {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        .credentials li {
+            padding: 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-gray);
+        }
+
+        .credentials li i {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        /* TESTIMONIALS */
+        .testimonials {
+            padding: 100px 40px;
+            background: var(--cream);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .testimonial-quote {
+            font-size: 3rem;
+            color: var(--primary);
+            opacity: 0.2;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-text {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .testimonial-rating {
+            color: #FFB800;
+            margin-bottom: 15px;
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            padding: 100px 40px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            text-align: center;
+            color: var(--white);
+        }
+
+        .cta-section h2 {
+            font-family: 'Lora', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--white);
+            color: var(--primary-dark);
+            padding: 20px 50px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        /* FOOTER */
+        .footer {
+            padding: 60px 40px 40px;
+            background: var(--text-dark);
+            color: var(--white);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            font-family: 'Lora', serif;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 15px 20px;
+            }
+
+            .hero {
+                padding: 60px 20px;
+            }
+
+            .services,
+            .about,
+            .testimonials,
+            .cta-section {
+                padding: 60px 20px;
+            }
+
+            .services-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Dra. Lúcia Mello</div>
+            <a href="#contato" class="header-cta">
+                <i class="fab fa-whatsapp"></i> Agendar Consulta
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>
+                    Amamentar <span class="highlight">Não Precisa Doer</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Consultoria especializada em amamentação com enfermeira obstetra experiente.
+                    Atendimento humanizado para você e seu bebê.
+                </p>
+                <ul class="hero-features">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Mais de 20 anos de experiência
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        1.000+ mães atendidas com sucesso
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Atendimento domiciliar ou online
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Especialista Unifesp
+                    </li>
+                </ul>
+                <a href="https://wa.me/5511964257905?text=Ol%C3%A1%20Dra.%20L%C3%BAcia%2C%20vim%20do%20site%20e%20gostaria%20de%20agendar%20uma%20consulta!" target="_blank" class="hero-cta">
+                    <i class="fab fa-whatsapp"></i> Falar com a Dra. Lúcia
+                </a>
+            </div>
+
+            <div class="hero-image">
+                <div class="hero-badge">
+                    <span class="hero-badge-number">1.000+</span>
+                    <span class="hero-badge-text">Mães Atendidas</span>
+                </div>
+                <div class="hero-badge">
+                    <span class="hero-badge-number">20 Anos</span>
+                    <span class="hero-badge-text">de Experiência</span>
+                </div>
+                <div class="hero-badge">
+                    <span class="hero-badge-number">100%</span>
+                    <span class="hero-badge-text">Humanizado</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <i class="fas fa-hospital"></i>
+                </div>
+                <span class="stat-number">Einstein</span>
+                <span class="stat-label">Hospital Albert Einstein</span>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <i class="fas fa-user-nurse"></i>
+                </div>
+                <span class="stat-number">Unifesp</span>
+                <span class="stat-label">Especialização</span>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <i class="fas fa-baby"></i>
+                </div>
+                <span class="stat-number">Pro Matre</span>
+                <span class="stat-label">Acompanhamento de Parto</span>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <span class="stat-number">2015</span>
+                <span class="stat-label">Dedicação Exclusiva</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="servicos">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Como Posso Ajudar</div>
+                <h2 class="section-title">Serviços Especializados</h2>
+                <p class="section-subtitle">
+                    Atendimento completo e humanizado para mães e bebês
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heart-pulse"></i>
+                    </div>
+                    <h3>Consultoria em Amamentação</h3>
+                    <p>Orientações sobre postura, pega, sucção e ordenha. Atendimento viável desde a gestação até o pós-parto.</p>
+                    <a href="#contato" class="service-link">
+                        Saiba mais <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-radiation"></i>
+                    </div>
+                    <h3>Laserterapia Pós-Parto</h3>
+                    <p>Tratamento com laser de baixa potência para fissuras, mastite, episiotomia e outras complicações puerperais.</p>
+                    <a href="#contato" class="service-link">
+                        Saiba mais <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-baby-carriage"></i>
+                    </div>
+                    <h3>Cuidados com Recém-Nascido</h3>
+                    <p>Orientações sobre higiene, banho, troca de fraldas, cuidados umbilicais e técnicas de conforto.</p>
+                    <a href="#contato" class="service-link">
+                        Saiba mais <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Colocação de Brincos</h3>
+                    <p>Procedimento humanizado e sem aflição para colocação de brincos em bebês com total segurança.</p>
+                    <a href="#contato" class="service-link">
+                        Saiba mais <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-list-check"></i>
+                    </div>
+                    <h3>Personal Baby Organizer</h3>
+                    <p>Assistência na organização do enxoval, quarto do bebê, bolsas de maternidade e itens necessários.</p>
+                    <a href="#contato" class="service-link">
+                        Saiba mais <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Cursos e Workshops</h3>
+                    <p>Programas presenciais e online para gestantes, desmame gradual e retorno ao trabalho.</p>
+                    <a href="#contato" class="service-link">
+                        Saiba mais <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about">
+        <div class="about-content">
+            <div class="about-image">
+                <i class="fas fa-user-nurse"></i>
+            </div>
+
+            <div class="about-text">
+                <h2>Dra. Lúcia Mello</h2>
+                <p>
+                    Enfermeira Obstetra com <strong>mais de 20 anos de experiência</strong>, especializada pela Unifesp.
+                    Trabalhei em instituições renomadas como Hospital Albert Einstein e Pro Matre Paulista.
+                </p>
+                <p>
+                    Após aposentadoria em 2015, dediquei-me exclusivamente à consultoria em amamentação,
+                    já tendo ajudado mais de <strong>1.000 mães</strong> a viverem a maternidade de forma plena e sem dor.
+                </p>
+
+                <ul class="credentials">
+                    <li>
+                        <i class="fas fa-certificate"></i>
+                        Enfermeira Obstetra - Unifesp
+                    </li>
+                    <li>
+                        <i class="fas fa-certificate"></i>
+                        Hospital Albert Einstein
+                    </li>
+                    <li>
+                        <i class="fas fa-certificate"></i>
+                        Pro Matre Paulista
+                    </li>
+                    <li>
+                        <i class="fas fa-certificate"></i>
+                        Especialista em Amamentação
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Depoimentos</div>
+                <h2 class="section-title">O Que as Mães Dizem</h2>
+                <p class="section-subtitle">
+                    Relatos reais de quem já foi atendida
+                </p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Excelente profissional! Educada, paciente e extremamente carinhosa.
+                        Me ajudou muito no processo de amamentação."
+                    </p>
+                    <div class="testimonial-author">— Suelen Mayara</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Ficou 3 horas me auxiliando na pega do bebê. Em 2 dias já vi melhora visível!
+                        Profissional incrível e dedicada."
+                    </p>
+                    <div class="testimonial-author">— Samantha Reis</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Amamentar não precisa doer! Foi isso que aprendi com a Dra. Lúcia.
+                        Atendimento humanizado e cheio de amor."
+                    </p>
+                    <div class="testimonial-author">— Juliana Santos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section" id="contato">
+        <div class="container">
+            <h2>Pronta Para Amamentar Sem Dor?</h2>
+            <p>
+                Agende sua consulta e receba todo o suporte necessário para viver a maternidade de forma plena e tranquila.
+            </p>
+            <a href="https://wa.me/5511964257905?text=Ol%C3%A1%20Dra.%20L%C3%BAcia%2C%20vim%20do%20site%20e%20gostaria%20de%20agendar%20uma%20consulta!" target="_blank" class="cta-button">
+                <i class="fab fa-whatsapp"></i> Agendar Consulta Agora
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Dra. Lúcia Mello</h4>
+                <p>Enfermeira Obstetra especializada em consultoria de amamentação e cuidados com recém-nascidos.</p>
+                <div class="social-links">
+                    <a href="https://instagram.com/draluciamello" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5511964257905" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:contato@luciamello.com.br"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Serviços</h4>
+                <a href="#servicos">Consultoria em Amamentação</a>
+                <a href="#servicos">Laserterapia Pós-Parto</a>
+                <a href="#servicos">Cuidados com Recém-Nascido</a>
+                <a href="#servicos">Personal Baby Organizer</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <a href="https://wa.me/5511964257905" target="_blank">WhatsApp: (11) 96425-7905</a>
+                <a href="https://instagram.com/draluciamello" target="_blank">Instagram: @draluciamello</a>
+                <a href="mailto:contato@luciamello.com.br">contato@luciamello.com.br</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Experiência</h4>
+                <p>✓ 20+ anos de experiência</p>
+                <p>✓ 1.000+ mães atendidas</p>
+                <p>✓ Especialista Unifesp</p>
+                <p>✓ Einstein & Pro Matre</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dra. Lúcia Mello - Consultoria em Amamentação. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .testimonial-card, .stat-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

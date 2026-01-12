@@ -10,7 +10,7 @@ COPY Proposta_Mahau_Bar.html /usr/share/nginx/html/mahaubar.html
 COPY Proposta_Mahau_Chatbot.html /usr/share/nginx/html/mahau_agenteia.html
 
 # Copiar Proposta Piercing Joia como piercingjoia.html
-COPY proposta-piercingjoia-2026_1.html /usr/share/nginx/html/piercingjoia.html
+COPY piercingjoia.html /usr/share/nginx/html/piercingjoia.html
 
 # Copiar pasta de logos
 COPY logos/ /usr/share/nginx/html/logos/
